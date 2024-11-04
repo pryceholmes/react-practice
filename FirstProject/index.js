@@ -1,34 +1,30 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
-/*
-Challenge: Starting from scratch, build and render the 
-HTML for our section project. Check the Google slide for 
-what you're trying to build.
+/**
+Challenge: 
 
-We'll be adding styling to it later.
+Part 1: Create a page of your own using a custom Page component
 
-Hints:
-* The React logo is a file in the project tree, so you can
-  access it by using `src="./react-logo.png" in your image
-  element
-* You can also set the `width` attribute of the image element
-  just like in HTML. In the slide, I have it set to 40px
+It should return an ordered list with the reasons why you're
+excited to be learning React :)
+
+Render your list to the page
+
  */
 
-const page = (
-  <div>
-    <img src="./react-logo.png" width="40"></img>
-    <h1>Fun Facts About React</h1>
-    <ul>
-      <li>Was first released in 2013</li>
-      <li>Was originally created by Jordan Walke</li>
-      <li>Has well over 100K stars on GitHub</li>
-      <li>Is maintained by Facebook</li>
-      <li>Powers thousands of enterprise apps, including mobile apps</li>
-    </ul>
-  </div>
-)
+function CustomComponent() {
+    return (
+        <div>
+            <h2>Reasons why i am excited to be learning React</h2>
+            <ul>
+                <li>So I can contribute to my capstone project</li>
+                <li>So I can be a good team member</li>
+                <li>So I can learn about front end development</li>
+            </ul>
+        </div>
+    )
+}
 
-root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(page)
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<CustomComponent />)
